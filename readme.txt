@@ -42,7 +42,7 @@ No, because if it does that, the page loading will be slow. So the stats are cac
 
 == Screenshots ==
 
-Screenshots will be soon available.
+Screenshots is available at http://subinsb.com/wp-statcounter-popular-posts-plugin
 
 == Changelog ==
 
