@@ -16,7 +16,9 @@ function SCPP_optPage(){
  	}
  	$SPPid = get_option("SPPproject")=="" ? "" : get_option("SPPproject");
 ?>
-	http://subinsb.com/wp-statcounter-popular-posts-plugin
+	<div id="message" class="update-nag">
+   	Read more about this plugin <a href="http://subinsb.com/wp-statcounter-popular-posts-plugin">here</a>.
+   </div>
 	<h1>SC Popular Posts Options</h1>
 	<p>You only have to enter the project ID of your StatCounter Project</p>
 	<form action="" method="POST">
