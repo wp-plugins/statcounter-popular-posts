@@ -3,7 +3,7 @@
  * Plugin Name: StatCounter Popular Posts
  * Plugin URI: http://subinsb.com/ask/statcounter-popular-posts
  * Description: Display Popular Posts from StatCounter
- * Version: 0.1
+ * Version: 0.1.1
  * Author: Subin Siby
  * Author URI: http://subinsb.com
  * License: GPLv3
