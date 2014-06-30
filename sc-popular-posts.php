@@ -1,7 +1,7 @@
 <?
 /**
  * Plugin Name: StatCounter Popular Posts
- * Plugin URI: http://subinsb.com/ask/popular-posts
+ * Plugin URI: http://subinsb.com/ask/statcounter-popular-posts
  * Description: Display Popular Posts from StatCounter
  * Version: 0.1
  * Author: Subin Siby
@@ -16,6 +16,7 @@ function SCPP_optPage(){
  	}
  	$SPPid = get_option("SPPproject")=="" ? "" : get_option("SPPproject");
 ?>
+	http://subinsb.com/wp-statcounter-popular-posts-plugin
 	<h1>SC Popular Posts Options</h1>
 	<p>You only have to enter the project ID of your StatCounter Project</p>
 	<form action="" method="POST">
@@ -26,6 +27,9 @@ function SCPP_optPage(){
 	<p>If the summary page URL of your project looks like this :</p>
 	<blockquote>http://statcounter.com/p1234567/summary/</blockquote>
 	<p>Then <b>p1234567</b> is your Project ID.</p>
+	<h2>Donate</h2>
+	<p>Please donate if you liked this plugin</p>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="ZYQWUZ2B8ZXXA"><button name="submit" type="submit"><img alt="Donate" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"></button><br><img alt="Donate" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1" border="0"></form>
 <?
 }
 
@@ -63,7 +67,7 @@ class SPP extends WP_Widget {
 	public function widget( $args, $instance ) {
 		echo $args['before_widget'];
 		$instance['type']  = isset($instance['type']) ? $instance['type']   : "";
-		$instance['items'] = isset($instance['items']) ? $instance['items']+1 : 10+1;
+		$instance['items'] = isset($instance['items']) ? $instance['items'] - 1 : 10 - 1;
 		
 		echo $args['before_title'] . "Popular Posts" . $args['after_title'];
 		
@@ -118,7 +122,7 @@ class SPP extends WP_Widget {
 		$output = "";
 		
 		/* The Site URL */
-		$siteURL		  = "http://subinsb.com/"; // get_home_url()
+		$siteURL		  = get_home_url(); // get_home_url()
 		$siteURLParts = parse_url($siteURL);
  		$siteURL		  = $siteURLParts['host'].$siteURLParts['path'];
 		
