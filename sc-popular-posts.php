@@ -142,12 +142,13 @@ class SPP extends WP_Widget {
  				$current_url = $current_url['host'].$current_url['path'];
  				
   				$slug		 	 = str_replace($siteURL, "", $current_url);
+  				$slugLast	= preg_match("/\//", $slug) ? explode("/", $slug)[0] : substr($slug, 1);
   				
   				/* Avoid Display of Home Page */
   				if($slug!=""){
 					$sqlstr = $wpdb->prepare("SELECT wposts.ID, wposts.guid
     					FROM $wpdb->posts wposts
-   					WHERE wposts.post_name LIKE %s", "%$slug%"
+   					WHERE wposts.post_name LIKE %s OR wposts.post_name LIKE $slugLast", "%$slug%"
    				);
    				$results = $wpdb->get_results($sqlstr, ARRAY_N);
    				if(isset($results[0][0])){
