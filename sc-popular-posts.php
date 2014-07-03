@@ -69,7 +69,7 @@ class SPP extends WP_Widget {
 	public function widget( $args, $instance ) {
 		echo $args['before_widget'];
 		$instance['type']  = isset($instance['type']) ? $instance['type']   : "";
-		$instance['items'] = isset($instance['items']) ? $instance['items'] - 1 : 10 - 1;
+		$instance['items'] = isset($instance['items']) ? $instance['items'] - 1 : 10;
 		
 		echo $args['before_title'] . "Popular Posts" . $args['after_title'];
 		
