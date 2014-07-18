@@ -4,7 +4,7 @@ Donate link: http://subinsb.com
 Tags: stats, popular, posts, statcounter
 Requires at least: 3.0.1
 Tested up to: 3.9.1
-Stable tag: 0.1.1
+Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sc-popular-posts
@@ -16,6 +16,10 @@ Displays Popular Posts From StatCounter stats as a widget. Only you have to do i
 Displays Popular Posts From StatCounter stats as a widget. Only you have to do is make the stats public and give the project ID to this plugin.
 
 You can configure which type of stats (pageviews, visitors) should be used to display the popular posts and no of items to be displayed.
+
+IMPORTANT NOTE - As far as the test I done, this plugin works on WP blogs with slug URLs as Post Name. Example, this site will work on wordpress blogs that have a post URL like http://subinsb.com/my-post-1
+
+I can't guarantee that it work on other slugs. But, you can try it and it may or may not work.
 
 == Installation ==
 
