@@ -69,7 +69,7 @@ class SPP extends WP_Widget {
 	public function widget( $args, $instance ) {
 		echo $args['before_widget'];
 		$instance['type']  = isset($instance['type']) ? $instance['type']   : "";
-		$instance['items'] = isset($instance['items']) ? $instance['items'] - 1 : 10;
+		$instance['items'] = isset($instance['items']) ? $instance['items']-1 : 10;
 		
 		echo $args['before_title'] . "Popular Posts" . $args['after_title'];
 		
@@ -139,10 +139,15 @@ class SPP extends WP_Widget {
 			if(isset($aElem->href)){
 				$href = $aElem->href;
 				$current_url = parse_url($href);
- 				$current_url = $current_url['host'].$current_url['path'];
+ 				$current_url = $current_url['host'] . $current_url['path'];
  				
-  				$slug		 	 = str_replace($siteURL, "", $current_url);
-  				$slugLast	= preg_match("/\//", $slug) ? explode("/", $slug)[0] : substr($slug, 1);
+  				$slug		 	= str_replace($siteURL, "", $current_url);
+  				if(preg_match("/\//", $slug)){
+  					$slugLast	= explode("/", $slug);
+  					$slugLast	= $slugLast[0];
+  				}else{
+  					$slugLast	= substr($slug, 1);
+  				}
   				
   				/* Avoid Display of Home Page */
   				if($slug!=""){
