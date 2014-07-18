@@ -19,7 +19,7 @@ You can configure which type of stats (pageviews, visitors) should be used to di
 
 IMPORTANT NOTE - As far as the test I done, this plugin works on WP blogs with slug URLs as Post Name. Example, this site will work on wordpress blogs that have a post URL like http://subinsb.com/my-post-1
 
-I can't guarantee that it work on other slugs. But, you can try it and it may or may not work.
+I can't guarantee that it work on other slugs. But, you can try it and it may or may not work. It it work, please tell me by emailing to mail[at]subinsb.com or via comments of http://subinsb.com/ask/statcounter-popular-posts
 
 == Installation ==
 
@@ -42,13 +42,16 @@ In order to access the Popular Pages, the stats should be made Public. This can 
 
 = Does the stats get fetched every time a page is loaded =
 
-No, because if it does that, the page loading will be slow. So the stats are cached for 10 minutes. This will reduce the number of times the stats should be fetched.
+No, because if it does that, the page loading will be slow. So the stats are cached for 10 minutes. This will reduce the number of times the fresh stats are fetched.
 
 == Screenshots ==
 
 Screenshots is available at http://subinsb.com/wp-statcounter-popular-posts-plugin
 
 == Changelog ==
+
+= 0.2 =
+* Tried adding support for Every slugs
 
 = 0.1.1 =
 * Fixed a serious bug

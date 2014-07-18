@@ -144,7 +144,9 @@ class SPP extends WP_Widget {
   				$slug		 	= str_replace($siteURL, "", $current_url);
   				if(preg_match("/\//", $slug)){
   					$slugLast	= explode("/", $slug);
-  					$slugLast	= $slugLast[1];
+  					$slashCount = count($slugLast);
+  					$lastSlash  = $slashCount - 1;
+  					$slugLast	= $slugLast[$lastSlash];
   				}else{
   					$slugLast	= substr($slug, 1);
   				}
