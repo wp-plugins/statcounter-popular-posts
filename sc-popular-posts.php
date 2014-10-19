@@ -3,7 +3,7 @@
  * Plugin Name: StatCounter Popular Posts
  * Plugin URI: http://subinsb.com/ask/statcounter-popular-posts
  * Description: Display Popular Posts from StatCounter
- * Version: 0.2
+ * Version: 0.2.1
  * Author: Subin Siby
  * Author URI: http://subinsb.com
  * License: GPLv3
@@ -17,8 +17,8 @@ function SCPP_optPage(){
  	$SPPid = get_option("SPPproject")=="" ? "" : get_option("SPPproject");
 ?>
 	<div id="message" class="update-nag">
-   	Read more about this plugin <a href="http://subinsb.com/wp-statcounter-popular-posts-plugin">here</a>.
-   </div>
+		Read more about this plugin <a href="http://subinsb.com/wp-statcounter-popular-posts-plugin">here</a>.
+    </div>
 	<h1>SC Popular Posts Options</h1>
 	<p>You only have to enter the project ID of your StatCounter Project</p>
 	<form action="" method="POST">
@@ -214,6 +214,7 @@ class SPP extends WP_Widget {
 	
 	/* Make an Item of list */
 	public function makeListItem($title, $url){
+		$url = stripos($url, 'http://') === 0 && is_ssl() == true ? "https" . substr($url, 4) : $url;
 		return '<li><a href="'.$url.'" title="'.$title.'">'.$title.'</a></li>';
 	}
 }

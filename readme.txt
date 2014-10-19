@@ -3,8 +3,8 @@ Contributors: subins2000
 Donate link: http://subinsb.com
 Tags: stats, popular, posts, statcounter
 Requires at least: 3.0.1
-Tested up to: 3.9.1
-Stable tag: 0.2
+Tested up to: 4.0
+Stable tag: 0.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sc-popular-posts
@@ -49,6 +49,9 @@ No, because if it does that, the page loading will be slow. So the stats are cac
 Screenshots is available at http://subinsb.com/wp-statcounter-popular-posts-plugin
 
 == Changelog ==
+
+= 0.2.1 =
+* HTTPS URL of popular posts on sites connected with HTTPS
 
 = 0.2 =
 * Tried adding support for Every slugs
