@@ -3,7 +3,7 @@ Contributors: subins2000
 Donate link: http://subinsb.com
 Tags: stats, popular, posts, statcounter
 Requires at least: 3.0.1
-Tested up to: 4.0
+Tested up to: 4.2
 Stable tag: 0.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
